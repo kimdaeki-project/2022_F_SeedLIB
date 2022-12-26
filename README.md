@@ -8,6 +8,6 @@
 * 사용 언어 : JAVA(JDK 1.7), oracle db, HTML, CSS, JavaScript, JSP & Servlet
 * 사용 기술 : Spring Framework, MyBatis, jQuery, Ajax, Open API(Iamport 결제 , JAVA 메일, Kakao Map)
 * 디자인 프레임워크 : Bootstrap
-# 팀원
-# ERD
-# 개발 환경 구축
+## 팀원
+## ERD
+## 개발 환경 구축
