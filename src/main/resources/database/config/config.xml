@@ -46,7 +46,6 @@
 		 <typeAlias type="com.seed.lib.board.BoardVO" alias="BoardVO"/>
 		 <typeAlias type="com.seed.lib.board.BoardFileVO" alias="BoardFileVO"/>
 		 <typeAlias type="com.seed.lib.board.qna.QnaVO" alias="QnaVO"/>
-		 <typeAlias type="com.seed.lib.board.wishboard.WishVO" alias="WishVO"/>
 		 <typeAlias type="com.seed.lib.util.BoardPager" alias="BoardPager"/>
 		 
 		 <typeAlias type="com.seed.lib.search.PopularVO" alias="PopularVO"/>

@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.seed.lib.util.DateUtil;
 import com.seed.lib.util.HdPager;
 
-@SpringBootTest
+//@SpringBootTest
 class AdProgramServiceTest {
 
 	@Autowired

@@ -12,7 +12,7 @@ import com.seed.lib.book.loan.BookLoanService;
 import com.seed.lib.member.MemberVO;
 import com.seed.lib.util.HdPager;
 
-@SpringBootTest
+//@SpringBootTest
 class AdMemberServiceTest {
 
 	@Autowired

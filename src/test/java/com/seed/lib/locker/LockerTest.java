@@ -11,8 +11,8 @@ import com.seed.lib.studyroom.LockerVO;
 
 import lombok.extern.slf4j.Slf4j;
 
-@SpringBootTest
-@Slf4j
+//@SpringBootTest
+//@Slf4j
 class LockerTest {
 
 	@Autowired
@@ -42,7 +42,7 @@ class LockerTest {
 //		log.info("OverLapLocker:{}",result);
 //	}
 	
-	@Test
+	//@Test
 	public void setMyLockerTest() throws Exception{
 		LockerVO lockerVO = new LockerVO();
 		lockerVO.setUserName("member1");
@@ -53,6 +53,5 @@ class LockerTest {
 		lockerVO.setRentDays(2);
 		
 		int result = lockerMapper.setMyLocker(lockerVO);
-		log.info("OverLapLocker:{}",result);
 	}
 }

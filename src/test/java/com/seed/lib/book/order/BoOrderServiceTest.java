@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.seed.lib.book.BookVO;
 import com.seed.lib.member.MemberVO;
 
-@SpringBootTest
+//@SpringBootTest
 class BoOrderServiceTest {
 
 	@Autowired

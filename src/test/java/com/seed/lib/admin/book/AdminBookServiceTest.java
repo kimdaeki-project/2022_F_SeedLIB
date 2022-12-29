@@ -12,7 +12,7 @@ import com.seed.lib.book.BookVO;
 import com.seed.lib.member.MemberVO;
 import com.seed.lib.util.AdbookPager;
 
-@SpringBootTest
+//@SpringBootTest
 class AdminBookServiceTest {
 	
 	@Autowired

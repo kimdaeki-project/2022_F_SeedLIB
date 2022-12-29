@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.seed.lib.util.DateUtil;
 
 import lombok.extern.slf4j.Slf4j;
-@SpringBootTest
+//@SpringBootTest
 @Slf4j
 class FormatTest {
 

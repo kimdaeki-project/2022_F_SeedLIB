@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-@SpringBootTest
+//@SpringBootTest
 class MemberTest {
 
 	@Autowired
@@ -16,7 +16,7 @@ class MemberTest {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
-	@Test
+	//@Test
 	void test() throws Exception {
 //		for(int i=0; i<20; i++) {
 //			MemberVO memberVO =new MemberVO();
