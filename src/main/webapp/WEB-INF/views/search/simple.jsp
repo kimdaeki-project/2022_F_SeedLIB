@@ -36,17 +36,7 @@
                     <a href="/seoksu/index.do" title="홈으로 이동" class="home"><span class="blind">홈</span></a>
                     <i class="arrow"></i> 자료검색 <i class="arrow"></i>소장자료검색<i class="arrow"></i>통합검색
                 </div>
-                <div class="snsFarm">
-                    <ul class="snsBtnArea clearfix">
-                        <li>
-                            <a href="#snsGroup" id="sns" title="SNS 공유하기" class="snsShare"><span class="blind">SNS 공유하기</span></a>
-                            <div id="snsGroup" class="snsList clearfix">
-                                <a href="#sns1" id="sns1" title="단축URL 복사하기" class="snsUrl" onclick="fnShorturlCopy();"><span class="blind">단축URL</span></a>
-                            </div>
-                        </li>
-                        <li class="mobileHide"><a href="#print" id="pprint" title="인쇄" class="snsPrint" onclick="javascript:fnPrintPopup('seoksu'); return false;"><span class="blind">현재화면 프린트</span></a></li>
-                    </ul>
-                </div>
+                
             </div>
     
             <div id="contents" class="contentArea">

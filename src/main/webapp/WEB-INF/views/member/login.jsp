@@ -79,13 +79,18 @@
                                             </div>
 
                                             <input type="submit" id="loginBtn" title="로그인" value="로그인" class="btnLogin themeBtn">
-                                           
+                                            <span class="remember" style="display: flex;
+                                            align-items: center;
+                                            margin-top: 14px;
+                                            margin-bottom: -5px;">
+                                                <input type="checkbox" name="rememberId" class="remember" id="rememberMe" >
+                                           		<label style="margin-left: 5px;"> ID 기억하기</label>
+                                            </span>	
                                                        
                                             <div class="member_confirm_line"></div>
                                             <div class="checkArea clearfix">
                                             
-                                            <span class="remember"><input type="checkbox" name="rememberId" class="remember" id="rememberMe" >
-                                           		<label > ID 기억하기</label></span>	
+                                            
                                                
                                                 <a href="/oauth2/authorization/kakao" >카카오 로그인</a>
                                                 <a href="/member/agree">회원가입</a>
