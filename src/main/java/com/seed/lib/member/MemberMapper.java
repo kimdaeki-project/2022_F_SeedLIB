@@ -20,4 +20,7 @@ public interface MemberMapper {
 	// 계정 잠금
 	public int setLocked(MemberVO memberVO)throws Exception;
 	
+	// 계정 잠금 풀기
+	public int setUnLocked(MemberVO memberVO)throws Exception;
+	
 }

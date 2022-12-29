@@ -31,4 +31,9 @@ public class AdMemberService {
 		return memberMapper.setLocked(memberVO);
 	}
 	
+	// 계정 잠금 풀기
+	public int setUnLocked(MemberVO memberVO)throws Exception{
+		return memberMapper.setUnLocked(memberVO);
+	}
+	
 }
