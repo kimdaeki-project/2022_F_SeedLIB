@@ -10,11 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/images/favicon.png">
     <title>회원 목록 : 씨앗도서관 ☘</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- ========== All CSS files linkup & sidebar ========= -->
     <c:import url="../temp/sidebar-css.jsp"></c:import>
     
-    <script type="text/javascript" src="/js/admin/adMember.js"></script>
+    <script type="text/javascript" defer src="/js/admin/adMember.js"></script>
   </head>
   <body>
     <!-- ======== main-wrapper start =========== -->
@@ -60,7 +62,7 @@
           <div class="tables-wrapper">
             <div class="row">
               <div class="col-lg-12">
-                <!-- <form action="./proList" method="get"> -->
+                <div class="userList">
                   <div class="card-style mb-30">
                     <form action="./adMemberList" method="get">
                       <div class="d-flex flex-wrap justify-content-between align-items-center py-1 mb-2">
@@ -95,13 +97,12 @@
                             <th><h6>회원가입일</h6></th>
                             <th><h6>연체반납횟수</h6></th>
                             <th><h6>회원상태</h6></th>
-                            <th><h6>계정비활성화</h6></th>
+                            <th><h6>계정활성화/비활성화</h6></th>
                           </tr>
                           <!-- end table row-->
                         </thead>
                         <tbody>
                           <c:forEach items="${memberList}" var="MemberVO">
-                          <form action="./locked" id="lockedForm" method="post">
                             <tr>
                               <td>
                                 <div class="employee-image">
@@ -152,15 +153,20 @@
                               </td>
                               <td>
                                 <div class="action d-grid gap-2 d-md-flex justify-content-center">
-                                  <button type="button" onclick="memberLocked()">
+                                  <button type="button" class="unLockId" data-user-id="${MemberVO.userName}">
                                     <a class="text-info">
-                                      <i class="lni lni-pencil-alt"></i>
+                                      <i class="lni lni-unlock"></i>
+                                    </a>
+                                  </button>
+                                  /
+                                  <button type="button" class="lockId" data-user-id="${MemberVO.userName}">
+                                    <a class="text-danger">
+                                      <i class="lni lni-lock"></i>
                                     </a>
                                   </button>
                                 </div>
                               </td>
                             </tr>
-                          </form>
                           </c:forEach>
                           <!-- end table row -->
                         </tbody>
@@ -190,7 +196,7 @@
                     </nav>
                   </div>
                   <!-- end card -->
-                <!-- </form> -->
+                </div>
               </div>
               <!-- end col -->
             </div>
