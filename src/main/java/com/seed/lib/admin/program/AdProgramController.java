@@ -137,6 +137,7 @@ public class AdProgramController {
 		mv.addObject("title", title);
 		mv.addObject("text", text);
 		mv.addObject("icon", icon);
+		mv.addObject("button", button);
 		mv.addObject("url", url);
 		mv.setViewName("common/result");
 		

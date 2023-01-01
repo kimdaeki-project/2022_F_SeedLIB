@@ -86,4 +86,9 @@
 			UPDATE MEMBER SET ACCOUNTNONLOCKED = 0 WHERE USERNAME = #{userName};
 		</update>
 		
+		<!--                      계정 잠금풀기                      -->
+		<update id="setUnLocked" parameterType="MemberVO">
+			UPDATE MEMBER SET ACCOUNTNONLOCKED = 1 WHERE USERNAME = #{userName};
+		</update>
+		
 </mapper>    

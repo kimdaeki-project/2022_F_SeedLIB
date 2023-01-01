@@ -38,17 +38,25 @@ public class AdMemberController {
 	}
 	
 	@PostMapping("locked")
-	public String setLocked(MemberVO memberVO)throws Exception{
+	@ResponseBody
+	public int setLocked(MemberVO memberVO)throws Exception{
 		
 		ModelAndView mv = new ModelAndView();
 		
 		int result = adMemberService.setLocked(memberVO);
 		
-		if(result > 0) {
-			
-		}
+		return result;
+	}
+	
+	@PostMapping("unLocked")
+	@ResponseBody
+	public int setUnLocked(MemberVO memberVO)throws Exception{
 		
-		return "admin/member/adMemberList";
+		ModelAndView mv = new ModelAndView();
+		
+		int result = adMemberService.setUnLocked(memberVO);
+		
+		return result;
 	}
 	
 }
