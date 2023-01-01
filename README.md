@@ -6,13 +6,15 @@
 * 주제 : 도서 대출, 도서 상세 정보 공유 및 시설 이용
 * 개발 : Spring Tool Suite 4 version , oracle sqldeveloper
 * 사용 언어 : JAVA(JDK 1.7), oracle db, HTML, CSS, JavaScript, JSP & Servlet
-* 사용 기술 : Spring Framework, MyBatis, jQuery, Ajax, Open API(Iamport 결제 , JAVA 메일, Kakao Map)
+* 사용 기술 : Spring Framework, MyBatis, jQuery, Ajax, Open API(Iamport 결제 , 구글 메일, Kakao Map)
 * 디자인 프레임워크 : Bootstrap
 ## 팀원 역할 분담
+<img src="https://user-images.githubusercontent.com/108776178/210174783-b8855162-6f55-4b39-b2ca-47bf1ab0aa42.png">
 ## ERD
-노션: https://www.notion.so/ERD-DB-0223600829ec439fbbca047f6c33caf7
-ERDCloud: https://www.erdcloud.com/d/7Q9CsauvLNgGT6ijj
+* 노션: https://www.notion.so/ERD-DB-0223600829ec439fbbca047f6c33caf7
+* ERDCloud: https://www.erdcloud.com/d/7Q9CsauvLNgGT6ijj
 ## 개발 환경 구축
+<img src="https://user-images.githubusercontent.com/108776178/210174709-9c135c96-c621-413a-b8da-5a0354eddaf5.png">
 ## 노션
 https://www.notion.so/b57b6de55b4a4bb28262fd56f826e1c5
 # SeedLib
