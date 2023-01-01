@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.seed.lib.book.BookVO;
 import com.seed.lib.util.HdPager;
+import com.seed.lib.util.MailService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,6 +20,9 @@ public class HopeService {
 
 	@Autowired
 	private HopeMapper hopeMapper;
+	
+	@Autowired
+	private MailService mailService;
 
 	public int getHaveBook(Map<String, Object> map) throws Exception{
 		return hopeMapper.getHaveBook(map);
@@ -110,6 +114,9 @@ public class HopeService {
 				if(result<1) {
 					throw new Exception();
 				} else {
+					if(hopeVO.getEmail()!=null) {
+						mailService.sendMail(hopeVO.getEmail(),hopeVO.getUserName(),"H");
+					}
 					return result;
 				}
 			}

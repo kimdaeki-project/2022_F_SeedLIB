@@ -124,6 +124,6 @@
             <button type="button" class="btn themeBtn" id="revBtn">좌석 예약</button>
         </div>
     </div>
-   <script src="/js/studyRoomRes.js"></script> 
+   <script src="/js/studyroomRes.js"></script> 
 </body>
 </html>
