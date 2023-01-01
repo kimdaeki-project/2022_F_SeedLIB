@@ -178,7 +178,7 @@
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">이메일</th>
-                                                            <td><input type="text" name="email" class="form-control" value="${hope.email}" readonly></td>
+                                                            <td><input type="text" id="email" name="email" class="form-control" value="${hope.email}" readonly></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

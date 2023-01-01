@@ -157,9 +157,7 @@ public class StudyRoomController {
 						  String stDate,
 						  String enDate,
 						  String rentDays,
-						  String userName) throws Exception{
-		log.info("들어옴.");
-		
+						  String userName) throws Exception{		
 		LockerVO lockerVO = new LockerVO();
 		lockerVO.setImp_uid(imp_uid);
 		lockerVO.setMerchant_uid(merchant_uid);
