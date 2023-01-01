@@ -25,6 +25,9 @@
 ## 노션
 * https://www.notion.so/b57b6de55b4a4bb28262fd56f826e1c5
 
+## PPT
+* https://docs.google.com/presentation/d/1WppEde7OnjiiK8Px4KuRbVQdnoTVs2Ep/edit?usp=sharing&ouid=103528894120254139033&rtpof=true&sd=true
+
 # SeedLib
 <img src="https://user-images.githubusercontent.com/103366296/209656844-132abf23-99db-4300-ad74-c21f6a2df93f.jpeg">
 
