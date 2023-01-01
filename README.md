@@ -1,7 +1,7 @@
 # 구디 아카데미 최종 프로젝트
 ## 씨앗 도서관
 * 온라인 서비스를 이용해 사용자의 편의성을 향상시킨 지역 도서관 웹사이트
-* 기간 : 2022.00.00 ~ 2022.12.22
+* 기간 : 2022.11.15 ~ 2022.12.22
 * 환경 : Apache Tomcat 9.0.64, Chrome 브라우저
 * 주제 : 도서 대출, 도서 상세 정보 공유 및 시설 이용
 * 개발 : Spring Tool Suite 4 version , oracle sqldeveloper
@@ -10,8 +10,11 @@
 * 디자인 프레임워크 : Bootstrap
 ## 팀원 역할 분담
 ## ERD
+노션: https://www.notion.so/ERD-DB-0223600829ec439fbbca047f6c33caf7
+ERDCloud: https://www.erdcloud.com/d/7Q9CsauvLNgGT6ijj
 ## 개발 환경 구축
 ## 노션
+https://www.notion.so/b57b6de55b4a4bb28262fd56f826e1c5
 # SeedLib
 <img src="https://user-images.githubusercontent.com/103366296/209656844-132abf23-99db-4300-ad74-c21f6a2df93f.jpeg">
 
