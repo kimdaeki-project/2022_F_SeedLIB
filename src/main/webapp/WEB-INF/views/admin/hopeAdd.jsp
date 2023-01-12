@@ -178,7 +178,16 @@
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">이메일</th>
-                                                            <td><input type="text" id="email" name="email" class="form-control" value="${hope.email}" readonly></td>
+                                                            <td>
+                                                              <c:choose>
+                                                                <c:when test="${hope.email ne 'nope'}">
+                                                                  <input type="text" id="email" name="email" class="form-control" value="${hope.email}" readonly>
+                                                                </c:when>
+                                                                <c:when test="${hope.email eq 'nope'}">
+                                                                  <input type="text" id="email" name="email" class="form-control" value="이메일 수신 비희망" readonly>
+                                                                </c:when>
+                                                              </c:choose>
+                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

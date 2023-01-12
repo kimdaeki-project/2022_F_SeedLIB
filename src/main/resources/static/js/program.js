@@ -1,7 +1,7 @@
 
 
 const userName = $("#userName").val();
-
+const proNum = $("#proNum").val();
 console.log(userName);
 //-------------------------------------------------
 //디테일 페이지에서 신청 눌렀을 때

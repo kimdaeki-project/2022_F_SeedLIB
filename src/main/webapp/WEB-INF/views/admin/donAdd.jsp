@@ -178,7 +178,16 @@
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">이메일</th>
-                                                            <td><input type="text" id="email" name="email" class="form-control" value="${don.email}" readonly></td>
+                                                            <td>
+                                                              <c:choose>
+                                                                <c:when test="${don.emailAgree eq 'Y'}">
+                                                                  <input type="text" id="email" name="email" class="form-control" value="${don.email}" readonly>
+                                                                </c:when>
+                                                                <c:when test="${don.emailAgree eq 'N'}">
+                                                                  <input type="text" id="email" name="email" class="form-control" value="이메일 수신 비희망" readonly>
+                                                                </c:when>
+                                                              </c:choose>
+                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -251,12 +260,10 @@
                                                           <td>
                                                             <c:choose>
                                                               <c:when test="${don.emailAgree eq 'Y'}">
-                                                                동의 <input type="radio" name="emailAgree" value="Y" checked readonly class="emailAgree"><br>
-                                                                비동의 <input type="radio" name="emailAgree" value="N" readonly class="emailAgree">
+                                                                동의
                                                               </c:when>
                                                               <c:when test="${don.emailAgree eq 'N'}">
-                                                                동의 <input type="radio" name="emailAgree" value="Y" readonly class="emailAgree"><br>
-                                                                비동의 <input type="radio" name="emailAgree" value="N" checked readonly class="emailAgree">
+                                                                비동의
                                                               </c:when>
                                                             </c:choose>
                                                           </td>
