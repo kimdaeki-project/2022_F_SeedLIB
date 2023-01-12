@@ -25,6 +25,10 @@ public interface HopeMapper {
 //마이페이지용
 	public Long getTotalCount(HdPager hdPager) throws Exception;
 	public List<HopeVO> getHopeList(HdPager hdPager) throws Exception;
+	public int getOverList(String userName) throws Exception;
+	public int getBookHisList(String userName) throws Exception;
+	public int getMuList(String userName) throws Exception;
+	public int getDonList(String userName) throws Exception;
 
 //신청 취소	
 	public int setUpdateHope(HopeVO hopeVO) throws Exception;
@@ -44,5 +48,7 @@ public interface HopeMapper {
 	public int getRevList(String userName) throws Exception;
 	public int getProList(String userName) throws Exception;
 	public int getHopList(String userName) throws Exception;
+	
+	
 	
 }

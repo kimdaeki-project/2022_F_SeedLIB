@@ -130,8 +130,24 @@ public class HopeService {
 		return hopeMapper.getLoanList(userName);
 	}
 	
+	public int getOverList(String userName) throws Exception{
+		return hopeMapper.getOverList(userName);
+	}
+	
 	public int getRevList(String userName) throws Exception{
 		return hopeMapper.getRevList(userName);
+	}
+	
+	public int getBookHisList(String userName) throws Exception{
+		return hopeMapper.getBookHisList(userName);
+	}
+	
+	public int getMuList(String userName) throws Exception{
+		return hopeMapper.getMuList(userName);
+	}
+	
+	public int getDonList(String userName) throws Exception{
+		return hopeMapper.getDonList(userName);
 	}
 	
 	public int getProList(String userName) throws Exception{

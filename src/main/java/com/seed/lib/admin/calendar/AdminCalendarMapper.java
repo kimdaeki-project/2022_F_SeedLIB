@@ -11,6 +11,8 @@ public interface AdminCalendarMapper {
 
 	public List<AdminCalendarVO> getSchedule() throws Exception;
 	public int setSchedule(AdminCalendarVO calendarVO) throws Exception;
+	public int setAdSchedule(AdProgramVO adProgramVO) throws Exception;
+	public int setPrSchedule(AdminCalendarVO calendarVO) throws Exception;
 	public int setScheduleUpdate(AdProgramVO adProgramVO) throws Exception;
 	public int setScheduleDelete(AdProgramVO adProgramVO) throws Exception;
 }

@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.seed.lib.admin.calendar.AdminCalendarService;
 import com.seed.lib.util.DateUtil;
 import com.seed.lib.util.HdPager;
 
@@ -18,6 +19,9 @@ public class AdProgramService {
 
 	@Autowired
 	private AdProgramMapper programMapper;
+	
+	@Autowired
+	private AdminCalendarService calendarService;
 	
 	// 문화프로그램 신청 승인/거부
 	public int setUpdateProCheck(AdProgramVO programVO)throws Exception{
@@ -42,6 +46,7 @@ public class AdProgramService {
 	
 	// 프로그램 삭제
 	public int setProgramDelete(AdProgramVO programVO)throws Exception{
+		calendarService.setScheduleDelete(programVO);
 		return programMapper.setProgramDelete(programVO);
 	}
 	
@@ -58,6 +63,7 @@ public class AdProgramService {
 		if(programVO != null) {
 			
 			result = programMapper.setProgramUpdate(programVO);
+			calendarService.setScheduleUpdate(programVO);
 			
 		}
 		

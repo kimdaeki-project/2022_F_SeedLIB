@@ -18,7 +18,16 @@ public class AdminCalendarService {
 	}
 	
 	public int setSchedule(AdminCalendarVO calendarVO) throws Exception{
+		AdProgramVO adProgramVO = new AdProgramVO();
+		adProgramVO.setProTitle(calendarVO.getTitle());
+		adProgramVO.setPsDt(calendarVO.getStart());
+		adProgramVO.setPlDt(calendarVO.getEnd());
+		calendarMapper.setAdSchedule(adProgramVO);
 		return calendarMapper.setSchedule(calendarVO);
+	}
+	
+	public int setPrSchedule(AdminCalendarVO calendarVO) throws Exception{
+		return calendarMapper.setPrSchedule(calendarVO);
 	}
 	
 	public int setScheduleUpdate(AdProgramVO adProgramVO) throws Exception{

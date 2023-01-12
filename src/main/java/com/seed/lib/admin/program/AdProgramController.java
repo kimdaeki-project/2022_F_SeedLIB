@@ -227,7 +227,7 @@ public class AdProgramController {
 			calendarVO.setTitle(programVO.getProTitle());
 			calendarVO.setStart(programVO.getPsDt());
 			calendarVO.setEnd(programVO.getPlDt());
-			calendarService.setSchedule(calendarVO);
+			calendarService.setPrSchedule(calendarVO);
 		}
 		
 		mv.addObject("title", title);

@@ -279,12 +279,38 @@
 		AND RTSTATUS = 1
 </select>
 
+<select id="getOverList" parameterType="String" resultType="int">
+	SELECT COUNT(*)
+	FROM LOAN L
+		INNER JOIN BOOK B
+		ON B.ISBN = L.ISBN
+	WHERE L.USERNAME = #{userName}
+		AND L.RTSTATUS = 1 AND L.LOANLDATE <![CDATA[<]]> CURDATE()
+</select>
+
 <select id="getRevList" parameterType="String" resultType="int">
 SELECT COUNT(*)
 	FROM RESERVATION E
 		INNER JOIN BOOK B
 		ON B.ISBN = E.ISBN
 	WHERE E.USERNAME = #{userName}
+</select>
+
+<select id="getBookHisList" parameterType="String" resultType="int">
+	SELECT COUNT(*)
+	FROM LOAN L
+		INNER JOIN BOOK B
+		ON B.ISBN = L.ISBN
+	WHERE L.USERNAME = #{userName}
+	AND L.RTSTATUS = 0
+</select>
+
+<select id="getMuList" parameterType="String" resultType="int">
+	SELECT COUNT(*)
+	FROM MUTUALLOAN M
+		INNER JOIN BOOK B
+		ON B.ISBN = M.ISBN
+	WHERE M.USERNAME = #{userName}
 </select>
 
 <select id="getProList" parameterType="String" resultType="int">
@@ -309,7 +335,24 @@ SELECT COUNT(*)
 				INNER JOIN
 				LIBRARY L
 				ON HL.LIBNUM=L.LIBNUM
-		WHERE USERNAME=#{userName}
+		WHERE USERNAME=#{userName} AND HS.STATNUM=0
+</select>
+
+<select id="getDonList" parameterType="String" resultType="int">
+	SELECT COUNT(D.DONNUM) FROM DONATION D
+			INNER JOIN
+			DOSTAT DS
+			ON D.DONNUM=DS.DONNUM
+				INNER JOIN
+				STATUS S
+				ON DS.STATNUM=S.STATNUM 
+			INNER JOIN
+			DONLIB DL
+			ON D.DONNUM=DL.DONNUM
+				INNER JOIN
+				LIBRARY L
+				ON DL.LIBNUM=L.LIBNUM
+		WHERE USERNAME=#{userName} AND DS.STATNUM=0
 </select>
 
 </mapper>    

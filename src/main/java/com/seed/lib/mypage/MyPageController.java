@@ -84,6 +84,22 @@ public class MyPageController {
 	    memberVO  = (MemberVO)authentication.getPrincipal();
 		memberVO= mypageService.getMyPage(memberVO);
 
+		int loanCount = hopeService.getLoanList(memberVO.getUsername());
+		int overCount = hopeService.getOverList(memberVO.getUsername());
+		int revCount = hopeService.getRevList(memberVO.getUsername());
+		int hisCount = hopeService.getBookHisList(memberVO.getUsername());
+		int muCount = hopeService.getMuList(memberVO.getUsername());
+		int proCount = hopeService.getProList(memberVO.getUsername());
+		int hopCount = hopeService.getHopList(memberVO.getUsername());
+		int donCount = hopeService.getDonList(memberVO.getUsername());
+		mv.addObject("loanCount", loanCount);
+		mv.addObject("overCount", overCount);
+		mv.addObject("revCount", revCount);
+		mv.addObject("hisCount", hisCount);
+		mv.addObject("muCount", muCount);
+		mv.addObject("proCount", proCount);
+		mv.addObject("hopCount", hopCount);
+		mv.addObject("donCount", donCount);
 		mv.addObject("vo", memberVO);
 		mv.setViewName("mypage/myIndex");
 		return mv;

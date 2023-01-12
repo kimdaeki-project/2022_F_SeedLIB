@@ -14,8 +14,20 @@
 		VALUES((SELECT MAX(PRONUM) FROM PROGRAM), #{title}, STR_TO_DATE(#{start}, '%Y-%m-%d %H:%i'), STR_TO_DATE(#{end}, '%Y-%m-%d %H:%i'));
 	</insert>
 	
+	<insert id="setAdSchedule" parameterType="AdProgramVO">
+	INSERT INTO PROGRAM
+		(PROCATE, RECSTATUS, PROTITLE, TARGET, TOTAL, PRSDATE, PRLDATE, PSDATE, PLDATE, PROTEACHER, PROPLACE, PROCONTENTS)
+	VALUES(NULL, NULL, #{proTitle}, NULL, NULL, NULL, NULL, STR_TO_DATE(#{psDt}, '%Y-%m-%d %H:%i'), STR_TO_DATE(#{plDt}, '%Y-%m-%d %H:%i'), NULL, NULL, NULL)
+	</insert>
+	
+	<insert id="setPrSchedule" parameterType="AdminCalendarVO">
+		INSERT INTO SCHEDULE
+		(ID, TITLE, START, END)
+		VALUES((SELECT MAX(PRONUM) FROM PROGRAM), #{title}, STR_TO_DATE(#{start}, '%Y-%m-%d %H:%i'), STR_TO_DATE(#{end}, '%Y-%m-%d %H:%i'));
+	</insert>
+	
 	<update id="setScheduleUpdate" parameterType="AdProgramVO">
-		UPDATE SCHEDULE SET TITLE=#{title}, START=STR_TO_DATE(#{psDt}, '%Y-%m-%d %H:%i', END=STR_TO_DATE(#{plDt}, '%Y-%m-%d %H:%i')
+		UPDATE SCHEDULE SET TITLE=#{proTitle}, START=STR_TO_DATE(#{psDt}, '%Y-%m-%d %H:%i'), END=STR_TO_DATE(#{plDt}, '%Y-%m-%d %H:%i')
 		WHERE ID=#{proNum}
 	</update>
 	

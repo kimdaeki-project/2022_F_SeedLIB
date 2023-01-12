@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.seed.lib.admin.program.AdProgramService;
 import com.seed.lib.studyroom.StudyDetailVO;
 import com.seed.lib.util.FullCalendarVO;
 
@@ -55,7 +56,6 @@ public class AdminCalendarController {
 		calendarVO.setTitle(calendarVO.getTitle());
 		calendarVO.setStart(calendarVO.getStart());
 		calendarVO.setEnd(calendarVO.getEnd());
-		log.info("calendar:{}", calendarVO);
 		return calendarService.setSchedule(calendarVO);
 	}
 }
