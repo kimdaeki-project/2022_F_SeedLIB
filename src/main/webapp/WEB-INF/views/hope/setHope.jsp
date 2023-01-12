@@ -229,6 +229,20 @@ pageEncoding="UTF-8"%>
                                             <th scope="row"><label for="requestReason">의견</label><span class="essential themeFC">*</span></th>
                                             <td><textarea name="hopMemo" id="hopMemo"></textarea></td>
                                         </tr>
+                                        <tr>
+                                            <th scope="row"><label for="hope_alert">처리 알림 여부</label><span class="require">*</span></th>
+                                            <td>
+                                                <span class="input_radio_wrap">
+                                                    <input type="radio" id="hope_alert01" class="emailAgree" name="emailAgree" title="알림여부" value="Y" checked="">
+                                                    <label for="hope_alert01">수신</label>
+                                                </span>
+                                                <span class="input_radio_wrap">
+                                                    <input type="radio" id="hope_alert02" class="emailAgree" name="emailAgree" title="알림여부" value="N">
+                                                    <label for="hope_alert02">미수신</label>
+                                                </span>
+                                                <p class="emp1 ref">접수 처리가 되면 상단의 이메일로 안내 이메일을 보내드립니다.</p>
+                                            </td>
+                                        </tr>      
                                     </tbody>
                                 </table>
                             </div>

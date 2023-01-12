@@ -22,6 +22,7 @@ public class HopeVO {
 	private String price;
 	private Long hopYear;
 	private Long category;
+	private String emailAgree;
 	
 	private StatusVO statusVO;
 	private LibVO libVO;

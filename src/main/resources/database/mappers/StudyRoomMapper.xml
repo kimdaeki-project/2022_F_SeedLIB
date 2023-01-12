@@ -28,7 +28,7 @@
 	
 	<insert id="setMySeat" parameterType="StudyDetailVO">
 		INSERT INTO STUDYDETAIL VALUES
-		(0, 0, #{seatNum}, SYSDATE(), #{roomNum}, #{userName});
+		(0, 0, #{seatNum}, NOW(), #{roomNum}, #{userName});
 	</insert>
 	
 	<select id="getSeatHistory" parameterType="String" resultType="StudyDetailVO">

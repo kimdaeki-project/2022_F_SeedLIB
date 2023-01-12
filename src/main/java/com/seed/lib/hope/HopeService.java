@@ -38,6 +38,9 @@ public class HopeService {
 	
 	@Transactional(rollbackFor = Exception.class)
 	public int setHope(HopeVO hopeVO, Map<String, Object> map) throws Exception{
+		if(hopeVO.getEmailAgree().equals("N")) {
+			hopeVO.setEmail("nope");
+		}
 		int result = hopeMapper.setHope(hopeVO);
 		map.put("hopNum", hopeVO.getHopNum());
 		if(result<0) {
@@ -114,7 +117,7 @@ public class HopeService {
 				if(result<1) {
 					throw new Exception();
 				} else {
-					if(hopeVO.getEmail()!=null) {
+					if(!hopeVO.getEmail().equals("nope")) {
 						mailService.sendMail(hopeVO.getEmail(),hopeVO.getUserName(),"H");
 					}
 					return result;

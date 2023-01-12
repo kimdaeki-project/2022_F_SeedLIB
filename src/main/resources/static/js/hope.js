@@ -259,6 +259,7 @@ $("#registBtn").click(function(){
             hMemoCheck = true;
         }
         if(hLibCheck&&hTitleCheck&&hWriterCheck&&hMemoCheck){
+            emailAgree = $(":input:radio[name=emailAgree]:checked").val();
             let libVO={
                 libNum:$("#hopLib").val()
             }
@@ -273,6 +274,7 @@ $("#registBtn").click(function(){
                 email:$("#email").val(),
                 price:$("#price").val(),
                 hopYear:$("#hopYear").val(),
+                emailAgree:emailAgree,
                 libVO:libVO
             }
             $.ajax({

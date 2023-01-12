@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.seed.lib.admin.program.AdProgramVO;
+
 @Service
 public class AdminCalendarService {
 	
@@ -17,6 +19,14 @@ public class AdminCalendarService {
 	
 	public int setSchedule(AdminCalendarVO calendarVO) throws Exception{
 		return calendarMapper.setSchedule(calendarVO);
+	}
+	
+	public int setScheduleUpdate(AdProgramVO adProgramVO) throws Exception{
+		return calendarMapper.setScheduleUpdate(adProgramVO);
+	}
+	
+	public int setScheduleDelete(AdProgramVO adProgramVO) throws Exception{
+		return calendarMapper.setScheduleDelete(adProgramVO);
 	}
 
 }

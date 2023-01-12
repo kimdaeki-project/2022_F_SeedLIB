@@ -10,8 +10,16 @@
 	
 	<insert id="setSchedule" parameterType="AdminCalendarVO">
 		INSERT INTO SCHEDULE
-		(TITLE, START, END)
-		VALUES(#{title}, STR_TO_DATE(#{start}, '%Y-%m-%d %H:%i'), STR_TO_DATE(#{end}, '%Y-%m-%d %H:%i'));
+		(ID, TITLE, START, END)
+		VALUES((SELECT MAX(PRONUM) FROM PROGRAM), #{title}, STR_TO_DATE(#{start}, '%Y-%m-%d %H:%i'), STR_TO_DATE(#{end}, '%Y-%m-%d %H:%i'));
 	</insert>
 	
+	<update id="setScheduleUpdate" parameterType="AdProgramVO">
+		UPDATE SCHEDULE SET TITLE=#{title}, START=STR_TO_DATE(#{psDt}, '%Y-%m-%d %H:%i', END=STR_TO_DATE(#{plDt}, '%Y-%m-%d %H:%i')
+		WHERE ID=#{proNum}
+	</update>
+	
+	<delete id="setScheduleDelete" parameterType="AdProgramVO">
+		DELETE FROM SCHEDULE WHERE ID = #{proNum}
+	</delete>
 </mapper>
